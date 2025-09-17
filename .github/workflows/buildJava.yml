@@ -1,0 +1,21 @@
+name: Java CI with Maven - Test and package
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build with Maven
+    runs-on: ubuntu-latest
+    steps:
+      - name: Go to repository root
+        uses: actions/checkout@v4
+
+      - name: Set up Java 21 (Corretto)
+        uses: actions/setup-java@v4
+        with:
+          distribution: "corretto"
+          java-version: "21"
+
+      - name: Build package with Maven and lunch JUnit tests
+        run: mvn -B package
