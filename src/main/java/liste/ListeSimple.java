@@ -13,6 +13,13 @@ public class ListeSimple {
         size++;
     }
 
+    /**
+     * Modifie la première occurrence d'un élément dans la liste en lui attribuant
+     * une nouvelle valeur.
+     * 
+     * @param element        l'élément à rechercher dans la liste
+     * @param nouvelleValeur la nouvelle valeur à attribuer à l'élément trouvé
+     */
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null && courant.getElement() != element)
@@ -21,6 +28,13 @@ public class ListeSimple {
             courant.setElement(nouvelleValeur);
     }
 
+    /**
+     * Modifie toutes les occurrences d'un élément dans la liste en lui attribuant
+     * une nouvelle valeur.
+     * 
+     * @param element        l'élément à rechercher dans la liste
+     * @param nouvelleValeur la nouvelle valeur à attribuer aux éléments trouvés
+     */
     public void modifieTous(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
         while (courant != null) {
@@ -30,6 +44,13 @@ public class ListeSimple {
         }
     }
 
+    /**
+     * Retourne une représentation sous forme de chaîne de caractères de la liste
+     * chaînée simple.
+     * Le format est "ListeSimple(element1, element2, ...)".
+     * 
+     * @return Représentation textuelle de la liste simple.
+     */
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
