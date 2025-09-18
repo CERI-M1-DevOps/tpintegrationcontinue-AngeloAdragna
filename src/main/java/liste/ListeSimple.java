@@ -43,6 +43,7 @@ public class ListeSimple {
         return sb.toString();
     }
 
+    // ici je regarde si ça part en cache
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
